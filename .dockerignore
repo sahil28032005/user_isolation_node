@@ -1,0 +1,30 @@
+# Ignore node_modules inside the vite-project directory
+vite-project/
+# workspaces/
+vite-project/node_modules
+
+# Ignore npm and yarn log files
+vite-project/npm-debug.log
+vite-project/yarn-debug.log
+vite-project/yarn-error.log
+
+# Ignore the build output (dist) if it’s not needed during the build process
+vite-project/dist
+
+# Ignore environment files
+vite-project/.env
+
+# Ignore Vite configuration if not needed in the container
+vite-project/vite.config.js
+
+# Ignore Docker-related files (optional)
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+*.jsx
+*.css
+# Ignore Git files and directories
+.git
+.gitignore
+# .env

@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  dev-environment:
+    image: my-dev-environment
+    container_name: user-${USER_ID}-container
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./workspaces/${USER_ID}:/usr/src/app/workspace
+    environment:
+      - CENTRAL_SERVER_URL=http://host.docker.internal:5000  # or the address where your central server is reachable
+    extra_hosts:
+      - "host.docker.internal:host-gateway"  
+    networks:
+      - dev-network
+
+networks:
+  dev-network:
+    driver: bridge
